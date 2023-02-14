@@ -1,0 +1,26 @@
+﻿
+	<div class="container">
+  <div class="row">
+    
+	@{
+	for(int i=0; i<Model.Count; i++)
+	{
+		var tovar = Model[i];
+
+	
+	<div class="col-sm-4" style="text-align:center; display:inline-block; margin-bottom:2vh;">
+		<a style="display:inline-block; color:black; text-decoration:none;" href="GetBenzById?id=@tovar.id" target="_blank">
+		<div style="text-align:center; font-size:24px; margin-bottom:1vh;"> @tovar.marka  @tovar.model</div>
+		<div style="text-align:center;" ><img style="width:90%;" src="images/@tovar.image"></div>
+		<div style="text-align:center; font-size:24px; margin-bottom:1vh;">@tovar.year<span>г</span>,цвет: @tovar.color</div>
+		<div style="text-align:center; font-size:24px; margin-bottom:1vh;">@tovar.toplivo, @tovar.price $</div>        
+     
+		  </a>
+		  </div>
+		
+	}
+}
+   </div>
+    </div>
+	
+	
